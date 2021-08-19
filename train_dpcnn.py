@@ -31,7 +31,7 @@ class Train_Valid():
         loss_list=[]
         #min_loss=100  #初始化一个最小损失值
         best_acc=0
-        for epoch in range(1,31): 
+        for epoch in range(1,26): 
             total_loss=0
             for i,(inputs,target) in enumerate(self.trainloader,1):
                 self.optimizer.zero_grad()
@@ -65,7 +65,7 @@ class Train_Valid():
             #保存效果最好的模型
             if test_acc>best_acc:
                 best_acc=test_acc
-                torch.save(self.model, 'C:/Users/10983/py入门/GRUClassifier/best_model')
+                torch.save(self.model, 'C:/Users/10983/py入门/DPCNN/best_model_dpcnn')
                 
             valid_acc_list.append(valid_acc)
             test_acc_list.append(test_acc)

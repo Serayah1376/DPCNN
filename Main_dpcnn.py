@@ -20,11 +20,11 @@ torch.cuda.manual_seed_all(123)#设置随机数种子，使每一次初始化数
 #parameters
 embed_dim=128  ##########
 BATCH_SIZE=128 #改为8试一下
-N_EPOCHS=30
+N_EPOCHS=25
 USE_GPU=True #使用GPU
 #gamma=0.1
 max_len=229   #代码最大长度（95%分词后的代码低于此长度）
-filter_num=250  #######
+filter_num=200  #######
 
 
 trainset=CodeDataset(is_train_set=True)
